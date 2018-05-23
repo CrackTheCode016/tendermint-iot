@@ -3,7 +3,7 @@ const genesis = require.resolve("./genesis.json");
 
 const app = lotion({
     initialState: {
-        foods: [ {sensor: "DHT11", temp: 57.2, time: "12:48 PM"}]
+        foods: [ {sensor: "DHT11", temp: "57.3", time: "12:48 PM"}]
     },
     devMode: true,
     peers: [],
@@ -19,7 +19,7 @@ app.use(function (state, tx) {
     }
 });
 
-app.listen(3000).then(genesis => {
+app.listen(process.env.PORT || 3000).then(genesis => {
     console.log("BLOCKCHAIN STARTED. WAITING FOR DA FOOD");
    console.log(genesis.GCI, genesis.chain_id);
 });
