@@ -5,7 +5,7 @@ const app = lotion({
     initialState: {
         foods: [ {sensor: "DHT11", temp: "57.3", time: "12:48 PM"}]
     },
-    devMode: true,
+    devMode: false,
     peers: [],
     logTendermint: false,
     createEmptyBlocks: false,
