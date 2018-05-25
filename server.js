@@ -19,7 +19,7 @@ app.use(function (state, tx) {
     }
 });
 
-app.listen('0.0.0.0', process.env.PORT || 8000).then(genesis => {
+app.listen(process.env.PORT || 8000).then(genesis => {
    console.log("BLOCKCHAIN STARTED. WAITING FOR DA FOOD");
    console.log(genesis.GCI);
    console.log(genesis);
