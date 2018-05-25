@@ -19,7 +19,8 @@ app.use(function (state, tx) {
     }
 });
 
-app.listen(process.env.PORT || 8000).then(genesis => {
-    console.log("BLOCKCHAIN STARTED. WAITING FOR DA FOOD");
-   console.log(genesis.GCI, genesis.chain_id);
+app.listen('0.0.0.0', process.env.PORT || 8000).then(genesis => {
+   console.log("BLOCKCHAIN STARTED. WAITING FOR DA FOOD");
+   console.log(genesis.GCI);
+   console.log(genesis);
 });
